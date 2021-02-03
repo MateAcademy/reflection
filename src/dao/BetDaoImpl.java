@@ -1,12 +1,14 @@
 package dao;
 
 import db.Storage;
+import lib.Dao;
 import model.Bet;
 
 import java.util.List;
 
 //Класс для доступа к данным хранилища ставок
 //Наш класс для работы с базой данных и таблицей ставок
+@Dao
 public class BetDaoImpl implements BetDao{
 
     //Должен быть написан код, инициализация соединения, открытие транзакции,

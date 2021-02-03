@@ -3,6 +3,7 @@ package controller;
 import dao.BetDao;
 import dao.BetDaoImpl;
 import factory.BetDaoFactory;
+import lib.Inject;
 import model.Bet;
 
 import java.util.Scanner;
@@ -10,8 +11,8 @@ import java.util.Scanner;
 //handler это обработчик
 public class ConsoleHandler {
 
-
-    private static final BetDao betDao = BetDaoFactory.getBetDao() ;
+    @Inject
+    private static BetDao betDao;
 
     static public void handle() {
         try (Scanner scanner = new Scanner(System.in)) {
@@ -30,6 +31,5 @@ public class ConsoleHandler {
             System.out.println("Данные введены не корректно");
         }
     }
-
 
 }
